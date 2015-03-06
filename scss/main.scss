@@ -1,4 +1,13 @@
 @import "../bower_components/susy/sass/susy";
 
+@import "_susy_settings.scss";
+
+@import "variables.scss";
+
+@import "_mixins.scss";
+
 @import "_reset.scss";
+
+@import "_text.scss";
+
 

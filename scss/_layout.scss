@@ -1,0 +1,9 @@
+//BODY
+
+.container{
+	@include comntainer;
+}
+
+.wrapper {
+	@include span-columns(2);
+}
