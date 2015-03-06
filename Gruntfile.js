@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       },
       options: {
         sourceMap: true, 
-        outputStyle: 'nested', 
+        outputStyle: 'compressed', 
         imagePath: "../",
       }
     },
