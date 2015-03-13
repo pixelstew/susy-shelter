@@ -1,9 +1,51 @@
 //BODY
 
 .container{
-	@include comntainer;
+	@include container;
 }
 
-.wrapper {
-	@include span-columns(2);
+header{
+	background: $secondary;
+	padding: 1em;
+	border-bottom: 10px solid $primary;
+}
+
+footer{
+	background: $secondary;
+	padding: 1em;
+	height: 8em;
+	border-top: 10px solid $primary;
+}
+
+main{
+	padding: 0.5em 1em;
+}
+
+.placeholder{
+	background: $secondary;
+	height: 12em;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.primary .placeholder-box{
+	@media (min-width: 40em){
+		@include span(6);
+		&:nth-of-type(2n){
+			@include span(6 last);
+		}		
+	}
+}
+
+.primary{
+	@media (min-width: 40em){
+		@include span(8);		
+	}	
+}
+
+.secondary{
+	@media (min-width: 40em){
+		@include span(4 last);		
+	}	
 }

@@ -33,6 +33,9 @@ module.exports = function(grunt) {
         // runs the task `sass` whenever any watched file changes 
         tasks: ['sass']
       },
+      html: {
+            files: ['*.html'],
+      },
       options: {
         // Sets livereload to true for livereload to work 
         // (livereload is not covered in this article)
