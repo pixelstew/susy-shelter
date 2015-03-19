@@ -2,7 +2,17 @@
 
 h1, h2, h3, h4, h5, h6, p, figcaption {
 	text-rendering: optimizeLegibility;
+	color: red;
+	font-family: $font-stack;
+	font-weight: 400;
+}
+
+p{
 	color: $primary;
+}
+
+a{
+	text-decoration: none;
 	font-family: $font-stack;
 }
 
