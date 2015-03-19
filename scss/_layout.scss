@@ -1,6 +1,6 @@
 //BODY
 
-.container{
+.row{
 	@include container;
 }
 
@@ -21,7 +21,7 @@ main{
 	padding: 0.5em 1em;
 }
 
-.placeholder{
+.placeholder--box{
 	background: $secondary;
 	height: 12em;
 	display: flex;
@@ -29,19 +29,25 @@ main{
   	align-items: center;
 }
 
-.primary .placeholder-box{
+.placeholder--description{
+	font-weight: 700;
+	padding-bottom: 0.4em;
+	margin-top: 0.6em;
+	border-bottom: 3px solid $secondary;
+}
+
+.primary{
+	@media (min-width: 40em){
+		@include span(8);		
+	}
+	.placeholder{
 	@media (min-width: 40em){
 		@include span(6);
 		&:nth-of-type(2n){
 			@include span(6 last);
 		}		
 	}
-}
-
-.primary{
-	@media (min-width: 40em){
-		@include span(8);		
-	}	
+  }	
 }
 
 .secondary{
