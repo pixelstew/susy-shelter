@@ -317,6 +317,7 @@ input::-moz-focus-inner {
 
 input {
   line-height: normal;
+  box-sizing: border-box;
 }
 
 /**

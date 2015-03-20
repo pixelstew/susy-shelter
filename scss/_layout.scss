@@ -15,44 +15,68 @@ header{
 		font-weight: 100;
 		font-size: 0.8em;
 	}
+	a, p{
+		@media (min-width: 40em){
+			@include span(2);
+			width: auto;
+			float: left;
+			clear:both;
+		}
+	}
+	svg{
+		@media (min-width: 40em){
+    	width: 50%;
+		}  		
+	}
 }
 
 //HOME PAGE BANNER
 
 .banner{
-	background: url('../images/new_home_banner_05.jpeg') no-repeat;
+	background: url('../images/new_home_banner_05.jpeg') no-repeat center left;
 	background-size: cover;
-	padding: 3em 1em;
-	overflow: hidden;
-	> div, > form{
+	padding: 3em 0;	
+		@media (min-width: 40em){
+			padding: 4em 0 6em;
+			margin-bottom: 1em;
+		}
+	* div, * form{
 		overflow: hidden;
-	}
+			@media (min-width: 40em){
+			@include span(5);
+			clear: both;
+		}
+ 	}
 	h1{
 		background: #000;
 		color: #fff;
 		pading: 10px 1em;
 		font-weight: 700;
-		@include span (11);
+		@include span (12);
+	}
+	.banner--form{
+		margin-bottom: 1em;
 	}
 	.banner--form input {
 		@include span (6);
-		height: 2em;
+		height: 2.4em;
 		padding-left: 10px;
-		font-family: $font-stack;		
+		overflow: hidden;
+		font-family: $font-stack;	
 	}
 	.banner--form--button{
-		@include span (5 );
-		height: 2.2em;
+		@include span (6 last);
+		height: 2.4em;
 		border: none;
 		background: $red;
 		color: #fff;
 		font-family: $font-stack;
-
 	}
 	.banner--link{
 		margin-top: 1em;
-  		color: #fff;
-  		display: block;
+  	color: #fff;
+  	display: block;
+  	clear: both;
 	}
 }
 
@@ -69,6 +93,7 @@ header{
 	padding-bottom: 0.4em;
 	margin-top: 0.6em;
 	border-bottom: 3px solid $secondary;
+	color: $primary;
 }
 
 .primary{
@@ -87,12 +112,15 @@ header{
 
 .secondary{
 	@media (min-width: 40em){
-		@include span(4 last);		
+		@include span(3.5 last);	
+		margin-top: 1em;	
+		font-size: 0.9em;
 	}	
 }
 
 footer{
 	background: $secondary;
+	margin-top: 1em;
 	padding: 1em;
 	height: 8em;
 	border-top: 10px solid $primary;
